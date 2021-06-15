@@ -7,6 +7,7 @@
         <methods>
           <include name="posleSvihTestova"/>
           <include name="logOut"/>
+          <include name="addWishList"/>
           <include name="preSvakogTesta"/>
           <include name="logInWithEmtyEmail"/>
           <include name="logInWIthValidCredential"/>

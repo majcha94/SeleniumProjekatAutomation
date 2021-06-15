@@ -6,13 +6,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class MyWishListTests extends LogInTest{
+public class MyWishListTests extends LogInTest {
 	@BeforeMethod
 	public void preSvihTesova() {
 		driver.navigate().to(homeUrl);
 		driver.manage().window().maximize();
 	}
-	@Test (priority = 5)
+
+	@Test(priority = 5)
 	public void addWishList() throws InterruptedException {
 		this.logInWIthValidCredential();
 		String listName = citacIzExcela.getStringData("My_Wishlist", 9, 2);
@@ -20,26 +21,28 @@ public class MyWishListTests extends LogInTest{
 		myWishList.clickSaveButton();
 		String assertLabel = myWishList.assertLabel();
 		assertEquals(listName, assertLabel);
-		
+
 	}
-	@Test (priority = 0)
+
+	@Test(priority = 0)
 	public void addingMultipleWishLists() throws InterruptedException {
 		this.logInWIthValidCredential();
+		mainPage.clickOnMyWishListButton();
 		brojKolona = 2;
 
 		for (int i = 0; i < 4; i++) {
-			String listName = citacIzExcela.getStringData("My_Wishlist", 26, brojKolona);
-				myWishList.insertListName(listName);
-				Thread.sleep(500);
-				myWishList.clickSaveButton();
-				brojKolona++;
+			String listName = citacIzExcela.getStringData("My_Wishlist", 27, brojKolona);
+			myWishList.insertListName(listName);
+			Thread.sleep(2000);
+			myWishList.clickSaveButton();
+			brojKolona++;
 
 		}
-		
+
 	}
-	
+
 	@AfterMethod
-	public void posleSvihTestova() {		
+	public void posleSvihTestova() {
 		driver.manage().deleteAllCookies();
 		driver.navigate().refresh();
 	}

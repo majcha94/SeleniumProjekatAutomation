@@ -20,7 +20,7 @@ public class MainNavigationPage {
 		this.getSignInNavigationButton().click();
 	}
 	public WebElement getMyWishListButton() {
-		return driver.findElement(By.linkText("My wishlists"));
+		return driver.findElement(By.cssSelector(".lnk_wishlist"));
 	}
 	public void clickOnMyWishListButton() {
 		this.getMyWishListButton().click();
