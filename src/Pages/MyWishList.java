@@ -42,6 +42,7 @@ public class MyWishList {
 	}
 	public void clickOnDeleteX() {
 		this.getDeleteButton().click();
+		driver.switchTo().alert().accept();
 	}
 	
 
