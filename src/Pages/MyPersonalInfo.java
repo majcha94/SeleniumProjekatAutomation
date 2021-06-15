@@ -10,6 +10,7 @@ public class MyPersonalInfo {
 	WebElement newPassword;
 	WebElement confirmation;
 	WebElement saveButton;
+	WebElement assertPersonalInfo;
 
 	public MyPersonalInfo(WebDriver driver) {
 		super();
@@ -43,6 +44,12 @@ public class MyPersonalInfo {
 	public void clickOnSaveButton() {
 		this.getSaveButton().click();
 	}
-	
+
+	public WebElement getAssertPersonalInfo() {
+		return driver.findElement(By.cssSelector("alert"));
+	}
+	public String assertMyPersonalInfo() {
+		return this.getAssertPersonalInfo().getText();
+	}
 	
 }

@@ -3,15 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.MyPersonalInfoTest">
+      <class name="Tests.MyWishListTests">
         <methods>
+          <include name="posleSvihTestova"/>
+          <include name="logOut"/>
           <include name="preSvakogTesta"/>
+          <include name="logInWithEmtyEmail"/>
+          <include name="logInWIthValidCredential"/>
+          <include name="logInWithEmtyPassword"/>
           <include name="posleSvakogTesta"/>
           <include name="preSvihTesova"/>
-          <include name="posleSvihTestova"/>
-          <include name="editMyPersonalInformation"/>
+          <include name="addingMultipleWishLists"/>
+          <include name="logInWithEmtyCredentials"/>
+          <include name="logInWithInvalidCredential"/>
         </methods>
-      </class> <!-- Tests.MyPersonalInfoTest -->
+      </class> <!-- Tests.MyWishListTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

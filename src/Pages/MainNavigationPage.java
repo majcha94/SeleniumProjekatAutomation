@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 public class MainNavigationPage {
 	WebDriver driver;
 	WebElement signInNavigationButton;
+	WebElement myWishListButton;
 	
 	public MainNavigationPage(WebDriver driver) {
 		super();
@@ -18,6 +19,13 @@ public class MainNavigationPage {
 	public void clickOnButtonSignIn() {
 		this.getSignInNavigationButton().click();
 	}
+	public WebElement getMyWishListButton() {
+		return driver.findElement(By.linkText("My wishlists"));
+	}
+	public void clickOnMyWishListButton() {
+		this.getMyWishListButton().click();
+	}
+	
 	
 	
 	

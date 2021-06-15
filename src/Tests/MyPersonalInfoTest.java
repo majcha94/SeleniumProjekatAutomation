@@ -2,6 +2,8 @@ package Tests;
 
 
 
+import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,6 +27,9 @@ public class MyPersonalInfoTest extends LogInTest{
 		String confirmNewPassword = citacIzExcela.getStringData("My_Personal_Info",11, 2);
 		myPersonalInfo.enterConfirmation(confirmNewPassword);
 		myPersonalInfo.clickOnSaveButton();
+		String actualText = myPersonalInfo.assertMyPersonalInfo();
+		String assertText = citacIzExcela.getStringData("My_Personal_Info",15, 1);
+		assertEquals(assertText,actualText);
 		
 	}
 	
