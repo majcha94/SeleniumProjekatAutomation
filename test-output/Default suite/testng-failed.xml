@@ -6,16 +6,17 @@
       <class name="Tests.MyWishListTests">
         <methods>
           <include name="posleSvihTestova"/>
+          <include name="logInWIthValidCredential"/>
+          <include name="posleSvakogTesta"/>
+          <include name="preSvihTesova"/>
+          <include name="logInWithEmtyCredentials"/>
+          <include name="deleteOneWishList"/>
           <include name="logOut"/>
           <include name="addWishList"/>
           <include name="preSvakogTesta"/>
           <include name="logInWithEmtyEmail"/>
-          <include name="logInWIthValidCredential"/>
           <include name="logInWithEmtyPassword"/>
-          <include name="posleSvakogTesta"/>
-          <include name="preSvihTesova"/>
           <include name="addingMultipleWishLists"/>
-          <include name="logInWithEmtyCredentials"/>
           <include name="logInWithInvalidCredential"/>
         </methods>
       </class> <!-- Tests.MyWishListTests -->

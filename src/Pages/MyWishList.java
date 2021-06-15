@@ -9,6 +9,7 @@ public class MyWishList {
 	WebElement nameInputField;
 	WebElement saveButton;
 	WebElement assertLabel;
+	WebElement deleteButton;
 
 	public MyWishList(WebDriver driver) {
 		super();
@@ -35,5 +36,13 @@ public class MyWishList {
 	public String assertLabel() {
 		return this.getAssertLabel().getText();
 	}
+
+	public WebElement getDeleteButton() {
+		return driver.findElement(By.xpath("//*[@id=\"wishlist_35314\"]/td[6]/a"));
+	}
+	public void clickOnDeleteX() {
+		this.getDeleteButton().click();
+	}
+	
 
 }

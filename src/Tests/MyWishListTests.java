@@ -24,7 +24,7 @@ public class MyWishListTests extends LogInTest {
 
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 10)
 	public void addingMultipleWishLists() throws InterruptedException {
 		this.logInWIthValidCredential();
 		mainPage.clickOnMyWishListButton();
@@ -39,6 +39,12 @@ public class MyWishListTests extends LogInTest {
 
 		}
 
+	}
+	@Test(priority = 0)
+	public void deleteOneWishList() throws InterruptedException {
+		this.logInWIthValidCredential();
+		myWishList.clickOnDeleteX();
+		
 	}
 
 	@AfterMethod
